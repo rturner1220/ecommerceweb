@@ -17,14 +17,15 @@ export const Cart = () => {
       <div>
         <h1>Your Cart Items</h1>
       </div>
+
       <div className="cartItems">
+        {/* eslint-disable-next-line */}
         {PRODUCTS.map((product) => {
           if (cartItems[product.id] !== 0) {
             return <CartItem data={product} />;
           }
         })}
       </div>
-
       {totalAmount > 0 ? (
         <div className="checkout">
           <p> Subtotal: ${totalAmount}</p>
